@@ -26,5 +26,4 @@ int main()
 	cout.tie(NULL);
 	
 	
-
 }
