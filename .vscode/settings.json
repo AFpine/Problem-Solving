@@ -2,7 +2,8 @@
     "files.associations": {
         "set": "cpp",
         "xtree": "cpp",
-        "vector": "cpp"
+        "vector": "cpp",
+        "utility": "cpp"
     },
     "C_Cpp.errorSquiggles": "Disabled",
     "git.ignoreLimitWarning": true
