@@ -1,8 +1,8 @@
 #include <bits/stdc++.h>
 
-// 12865 Standard Backpack (Knapsack Problem)
+// 
 
-//update 220308
+//update 220310
 
 using namespace std;
 
@@ -12,8 +12,6 @@ int main()
 	cin.tie(NULL);
 	cout.tie(NULL);
 	
-	int N,K;
-	cin>>N>>K;
 	
 	
 }
