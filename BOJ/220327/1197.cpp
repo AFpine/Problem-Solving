@@ -1,6 +1,6 @@
 #include <bits/stdc++.h>
 
-// 1197 Mininum Spanning Tree (Prim Algorithm )
+// 1197 Mininum Spanning Tree (Prim Algorithm)
 
 // update 220327
 
