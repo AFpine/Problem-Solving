@@ -91,7 +91,7 @@ int main() {
 	if(arr[1] > 1 || arr[N] > 1) incorrect = true;
 
 	int ans = 0;
-
+	
 	ans = f(1, 0, 0);
 
 	if(incorrect || ans) cout<<"NO";

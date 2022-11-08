@@ -3,7 +3,7 @@
 #pragma GCC optimize("unroll-loops")
 #include <bits/stdc++.h>
 
-// 20176
+// 
 
 // 221107
 
@@ -102,7 +102,7 @@ void solve() {
 
 	ll result = 0;
 	for(int i = 0; i <= 60000; ++i) {
-		result += B[i] * res[i*2];
+		if(B[i]) result += res[i*2];
 	}
 	cout<<result;
 }
