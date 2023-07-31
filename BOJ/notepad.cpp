@@ -1,9 +1,5 @@
 #include <bits/stdc++.h>
 
-// 23577 Trio
-
-// update 220926
-
 using namespace std;
 #define sz(a) (int)(a.size()) 
 #define all(a) (a).begin(), (a).end()
@@ -19,26 +15,16 @@ const int INF = 1e9+5;
 const long long llINF = 1e18;
 const int minINF = -2e9-1;
 const long long MOD = 1e9+7;
-const int MAX = 1000005;
+const int MAX = 2020;
 
 int N;
-int cnt[4][10];
-vector<string> arr;
-
-ll f(int idx, const string& s1, const string& s2) {
-	if(idx >= 4) return 0;
-	if(s1[idx] == s2[idx]) {
-		
-	}
-	else {
-		
-	}
-}
+int arr[MAX];
+int lis[MAX], lds[MAX];
 
 int main() {
-	#ifndef ONLINE_JUDGE
-	freopen("input.txt", "r", stdin);
-	freopen("output.txt", "w", stdout);
+    #ifndef ONLINE_JUDGE
+	freopen("C:/Users/mrt20/Desktop/AFpine/PS/PS_NotePad/BOJ/input.txt", "r", stdin);
+	freopen("C:/Users/mrt20/Desktop/AFpine/PS/PS_NotePad/BOJ/output.txt", "w", stdout);
 	#endif
 
 	ios_base::sync_with_stdio(false);
@@ -46,21 +32,20 @@ int main() {
 	cout.tie(NULL);
 
 	cin>>N;
-	arr.resize(N);
-	for(auto &i : arr) cin>>i;
+	for(int i = 1; i <= N; ++i) cin>>arr[i];
 	
-	sort(all(arr));
-	for(auto &i : arr) {
-		for(int j = 0; j < 4; ++j) cnt[j][i[j]]++;
-	}
-
-	ll res = 0;
-	for(int i = 0; i < N; ++i) {
-		for(int j = i + 1; j < N; ++j) {
-
+	for(int i = N; i >= 1; --i) {
+		lis[i] = lds[i] = 1;
+		for(int j = N; j > i; --j) {
+			if(arr[j] > arr[i]) lis[i] = max(lis[i], lis[j] + 1);
+			if(arr[j] < arr[i]) lds[i] = max(lds[i], lds[j] + 1);
 		}
 	}
-	
+
+	int result = 0;
+	for(int i = 1; i <= N; ++i) result = max(result, lis[i] + lds[i] - 1);
+
+	cout<<result;
 
 	return 0;
 }
