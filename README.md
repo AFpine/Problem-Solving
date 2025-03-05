@@ -1,11 +1,4 @@
-# PS_NotePad (22.02~)
+# Problem-Solving
 
-**Problem Solving**
-
-**Algorithm**
-
-**Data Structure**
-
-**Programming Language**
-
-**Programming Contest**
+- BOJ: [afpine](https://www.acmicpc.net/user/afpine)
+- codeforces: [AFpine](https://codeforces.com/profile/AFpine)
